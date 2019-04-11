@@ -1,0 +1,15 @@
+
+.jumbotron .background-image {
+    height: 200px;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxb6rQZv385sDuDD3MoL-vFoVyeXHgMZxgPcKHucmTRzFgBSu7);
+    background-size: cover;
+    color: white;
+}
+
+.jumbotron{
+    background-color: white;
+}
+
+h1 {
+    font-size: 5rem;
+}
