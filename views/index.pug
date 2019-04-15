@@ -17,11 +17,11 @@ html
             #navbarNavDropdown.collapse.navbar-collapse
                 ul.navbar-nav
                     li.nav-item
-                        a.nav-link(href='#')
+                        a.nav-link(href='/home')
                             | Home 
                             span.sr-only (current)
                     li.nav-item
-                        a.nav-link(href='#') Saved Articles
+                        a.nav-link(href='/savedArticles') Saved Articles
                     button.btn.btn-primary(type='button', id='button1') Scrape New Articles!
                     button.btn.btn-danger(type='button', id= "clear") Clear Articles!
         div
@@ -32,7 +32,7 @@ html
                             h1 Mongo Scraper
                             p CNN Edition
 
-        div#articles
+        div.card#articles
                                 
             //- javascript
         script(src="/js/main.js")
