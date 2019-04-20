@@ -13,11 +13,12 @@ var PORT = process.env.PORT || 3000;
 // initialize express
 var app = express();
 
-app.set('view engine', 'pug')
+app.set('view engine', 'pug');
+app.set("views", path.join(__dirname, "views"));
 
 app.use(express.static(__dirname + '/public'));
 
-const MONGODB_URI= process.env.MONGODB_URI || "mongodb://localhost/scrapper"
+const MONGODB_URI= process.env.MONGODB_URI || "mongodb://localhost/scrapper";
 mongoose.connect(MONGODB_URI);
 
 // routes
