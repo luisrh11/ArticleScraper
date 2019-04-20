@@ -9,7 +9,7 @@ var axios = require("axios");
 var db = require("./models");
 
 // the port on which the page will load
-var PORT = 8080;
+var PORT = process.env.PORT || 3000;
 // initialize express
 var app = express();
 
