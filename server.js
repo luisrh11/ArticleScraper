@@ -9,18 +9,21 @@ var axios = require("axios");
 var db = require("./models");
 
 // the port on which the page will load
-var PORT = process.env.PORT || 3000;
+var PORT = process.env.PORT || 5000;
 // initialize express
 var app = express();
 
 app.set('view engine', 'pug');
 // app.set("views", path.join(__dirname, "views"));
-app.set("port", ( process.env.PORT || 3000));
+// app.set("port", ( process.env.PORT || 3000));
+
 app.use(express.static(__dirname + '/public'));
 
 const MONGODB_URI= process.env.MONGODB_URI || "mongodb://localhost/scrapper";
 mongoose.connect(MONGODB_URI);
-if (process.env.NODE_ENV !== 'production') { require('dotenv').config() }
+
+// if (process.env.NODE_ENV !== 'production') { require('dotenv').config() }
+process.env.NODE_ENV = "production";
 
 // routes
 
