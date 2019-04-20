@@ -26,13 +26,13 @@ $("#button1").on("click", function () {
     });
 });
 
-$('#clear').click(function () {
-    $.get("/clear")
-        .then(function () {
-            articleContainer.empty();
-            initPage();
-        })
-})
+// $('#clear').click(function () {
+//     $.get("/clear")
+//         .then(function () {
+//             articleContainer.empty();
+//             initPage();
+//         })
+// })
 
 $(document).on("click", "#save", function () {
     var id = $(this).attr("dataid");
