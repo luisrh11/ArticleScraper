@@ -17,8 +17,8 @@ app.set('view engine', 'pug')
 
 app.use(express.static(__dirname + '/public'));
 
-
-mongoose.connect("mongodb://localhost/scrapper", { useNewUrlParser: true });
+const MONGODB_URI= process.env.MONGODB_URI || "mongodb://localhost/scrapper"
+mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 
 // routes
 
